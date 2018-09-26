@@ -1,0 +1,51 @@
+{
+  "defaultSeverity": "warning",
+  "extends": ["tslint:recommended"],
+  "linterOptions": {
+    "exclude": ["node_modules/**/*.ts"]
+  },
+  "rules": {
+    "object-literal-sort-keys": false,
+    "max-classes-per-file": false,
+    "ordered-imports": false,
+    "no-namespace": false,
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore",
+      "allow-snake-case"
+    ],
+    "no-conditional-assignment": false,
+    "no-shadowed-variable": false,
+    "quotemark": [true, "single", "avoid-template", "avoid-escape"],
+    "no-console": false,
+    "no-magic-numbers": true,
+    "no-unused-expression": true,
+    "no-unused-variable": true,
+    "no-trailing-whitespace": true,
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "never",
+        "singleline": "never"
+      }
+    ],
+    "arrow-parens": false,
+    "no-unnecessary-initializer": true,
+    "no-use-before-declare": true,
+    "no-var-keyword": true,
+    "one-line": [
+      true,
+      "check-open-brace",
+      "check-catch",
+      "check-else",
+      "check-whitespace"
+    ],
+    "curly": [true, "as-needed"],
+    "prefer-const": true,
+    "radix": true,
+    "semicolon": [true, "never"]
+  },
+  "rulesDirectory": []
+}

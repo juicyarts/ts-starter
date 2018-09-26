@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "noUnusedLocals": true,
+    "target": "es2017",
+    "module": "commonjs",
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "baseUrl": "./",
+    "noImplicitAny": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "noEmit": true,
+    "noEmitHelpers": true,
+    "importHelpers": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "pretty": false,
+    "declaration": false,
+    "lib": ["es2016", "es2017", "es2018"]
+  }
+}

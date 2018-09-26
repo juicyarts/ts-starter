@@ -1,0 +1,80 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug: Project",
+      "type": "node",
+      "request": "launch",
+      "args": ["${file}"],
+      "runtimeArgs": ["--nolazy", "-r", "ts-node/register"],
+      "sourceMaps": true,
+      "cwd": "${workspaceRoot}",
+      "protocol": "inspector"
+    },
+    {
+      "name": "Test: Current File",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+      "env": {
+        "DEBUG": "superagent",
+        "NODE_ENV": "test",
+        "PORT": "4201"
+      },
+      "args": ["--timeout", "999999", "--colors", "--exit", "${relativeFile}"],
+      "cwd": "${workspaceRoot}",
+      "protocol": "inspector",
+      "internalConsoleOptions": "openOnSessionStart"
+    },
+    {
+      "name": "Test: Watch Current File",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+      "env": {
+        "NODE_ENV": "test",
+        "PORT": "4201"
+      },
+      "args": ["--timeout", "999999", "--colors", "--watch", "--watch-extensions", "ts", "--exit", "${relativeFile}"],
+      "cwd": "${workspaceRoot}",
+      "protocol": "inspector",
+      "internalConsoleOptions": "openOnSessionStart"
+    },
+    {
+      "name": "Test: All",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+      "env": {
+        "NODE_ENV": "test",
+        "PORT": "4201"
+      },
+      "args": ["--timeout", "999999", "--colors", "--exit", "${workspaceRoot}/test/**/*.ts"],
+      "cwd": "${workspaceRoot}",
+      "protocol": "inspector",
+      "internalConsoleOptions": "openOnSessionStart"
+    },
+    {
+      "name": "Test: Watch All",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+      "env": {
+        "NODE_ENV": "test",
+        "PORT": "4201"
+      },
+      "args": [
+        "--timeout",
+        "999999",
+        "--colors",
+        "--watch",
+        "--watch-extensions",
+        "ts",
+        "${workspaceRoot}/test/**/*.ts"
+      ],
+      "cwd": "${workspaceRoot}",
+      "protocol": "inspector",
+      "internalConsoleOptions": "openOnSessionStart"
+    }
+  ]
+}
