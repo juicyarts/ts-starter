@@ -5,9 +5,12 @@
     "exclude": ["node_modules/**/*.ts"]
   },
   "rules": {
+    "interface-name": false,
     "object-literal-sort-keys": false,
     "max-classes-per-file": false,
     "ordered-imports": false,
+    "member-access": false,
+    "member-ordering": false,
     "no-namespace": false,
     "variable-name": [
       true,
@@ -22,18 +25,16 @@
     "no-console": false,
     "no-magic-numbers": true,
     "no-unused-expression": true,
-    "no-unused-variable": true,
     "no-trailing-whitespace": true,
     "trailing-comma": [
       true,
       {
-        "multiline": "never",
+        "multiline": "always",
         "singleline": "never"
       }
     ],
     "arrow-parens": false,
     "no-unnecessary-initializer": true,
-    "no-use-before-declare": true,
     "no-var-keyword": true,
     "one-line": [
       true,

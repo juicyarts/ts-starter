@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node -r ts-node/register src/index.ts",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "lint": "tslint -t stylish -p ."
   },
   "devDependencies": {
     "@babel/core": "^7.7.2",
@@ -15,6 +16,7 @@
     "@types/jest": "^24.0.22",
     "babel-jest": "^24.9.0",
     "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
     "tslint": "^5.20.1"
   },
   "dependencies": {
